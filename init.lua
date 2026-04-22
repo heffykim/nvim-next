@@ -19,6 +19,5 @@ require('vim._core.ui2').enable({
   }
 })
 
-vim.pack.add({ 'https://github.com/webhooked/kanso.nvim' })
 vim.pack.add({ 'https://github.com/rebelot/kanagawa.nvim' })
 vim.cmd("colorscheme kanagawa")
