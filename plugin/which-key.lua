@@ -3,8 +3,8 @@ vim.schedule(function()
 	vim.pack.add({ "https://github.com/folke/which-key.nvim" })
 
 	require("which-key").setup({
-    preset = 'helix'
-  })
+		preset = "helix",
+	})
 
 	vim.keymap.set("n", "<leader>?", function()
 		require("which-key").show({ global = false })
