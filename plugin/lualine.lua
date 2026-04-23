@@ -11,7 +11,7 @@ require("lualine").setup({
   },
   sections = {
     lualine_a = { { "mode", separator = { left = "" }, right_padding = 2 } },
-    lualine_b = { { "filename", path = 1 }, "branch" },
+    lualine_b = { { "filename", path = 3 }, "branch" },
     lualine_c = {
       "%=", --[[ add your center compoentnts here in place of this comment ]]
     },
