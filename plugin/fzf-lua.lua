@@ -9,4 +9,5 @@ vim.keymap.set("n", "<leader>fg", "<cmd>FzfLua live_grep<CR>", { desc = "[f]ind 
 vim.keymap.set("n", "<leader>fw", "<cmd>FzfLua grep_cword<CR>", { desc = "[f]ind [w]ord" })
 vim.keymap.set("n", "<leader>fd", "<cmd>FzfLua diagnostics_document<CR>", { desc = "[f]ind [d]iagnostics" })
 vim.keymap.set("n", "<leader>fr", "<cmd>FzfLua resume<CR>", { desc = "[f]ind [r]esume" })
+vim.keymap.set("n", "<leader>fs", "<cmd>FzfLua git_status<CR>", { desc = "[f]ind git [s]tatus" })
 vim.keymap.set("n", "<leader><leader>", "<cmd>FzfLua buffers<CR>", { desc = "[f]ind buffers" })
