@@ -16,6 +16,7 @@ vim.schedule(function()
 		{ "<leader>t", group = "[t]ab" },
 		{ "<leader>u", group = "[u]i" },
 		{ "<leader>x", group = "fi[x] list" },
+		{ "<leader>o", group = "[o]rg-mode" },
 	})
 
 	vim.keymap.set("n", "<leader>?", function()
