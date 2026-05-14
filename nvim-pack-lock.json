@@ -1,5 +1,9 @@
 {
   "plugins": {
+    "arborist.nvim": {
+      "rev": "6cffbf419a495c84c56b918771a3d004e892e235",
+      "src": "https://github.com/arborist-ts/arborist.nvim"
+    },
     "blink.cmp": {
       "rev": "78336bc89ee5365633bcf754d93df01678b5c08f",
       "src": "https://github.com/saghen/blink.cmp",
@@ -53,8 +57,16 @@
       "rev": "0fcc83805ad11cf714a949c98c605ed717e0b83e",
       "src": "https://github.com/stevearc/oil.nvim"
     },
+    "org-super-agenda.nvim": {
+      "rev": "c467a59836080bb41693bcf3f25c2d2096b6c32d",
+      "src": "https://github.com/hamidi-dev/org-super-agenda.nvim"
+    },
+    "orgmode": {
+      "rev": "a214db3c8ed7eb68cb74924575b91ffc658e7d82",
+      "src": "http://github.com/nvim-orgmode/orgmode"
+    },
     "tree-sitter-manager.nvim": {
-      "rev": "6b5d8768a1cc5a35af5ec9d3b082bc6e2bdfdb95",
+      "rev": "ae287204a4fe9174e82bad17c102e721e5aa8520",
       "src": "https://github.com/romus204/tree-sitter-manager.nvim"
     },
     "vim-fugitive": {
