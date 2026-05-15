@@ -4,7 +4,43 @@ vim.pack.add({ "https://github.com/hamidi-dev/org-super-agenda.nvim" })
 require('orgmode').setup({
   org_agenda_files = "~/orgfiles/**/*",
   org_default_notes_file = "~/orgfiles/refile.org",
-  org_todo_keywords = { 'TODO', 'PROGRESS', 'WAITING', 'DONE' }
+  org_todo_keywords = { 'TODO', 'PROGRESS', 'WAITING', '|', 'DONE', 'CANCELLED' },
+  org_todo_keyword_faces = {
+    PROGRESS = ':foreground #FFAA00',
+    WAITING = ':foreground #BD93F9',
+    DONE = ':foreground #50FA7B'
+  },
+  org_agenda_custom_commands = {
+    c = {
+      description = 'Combined view', -- Description shown in the prompt for the shortcut
+      types = {
+        {
+          type = 'tags_todo',                       -- Type can be agenda | tags | tags_todo
+          match = '+PRIORITY="A"',                  --Same as providing a "Match:" for tags view <leader>oa + m, See: https://orgmode.org/manual/Matching-tags-and-properties.html
+          org_agenda_overriding_header = 'High priority todos',
+          org_agenda_todo_ignore_deadlines = 'far', -- Ignore all deadlines that are too far in future (over org_deadline_warning_days). Possible values: all | near | far | past | future
+        },
+        {
+          type = 'agenda',
+          org_agenda_overriding_header = 'My daily agenda',
+          org_agenda_span = 'day' -- can be any value as org_agenda_span
+        },
+        {
+          type = 'tags',
+          match = 'work',                           --Same as providing a "Match:" for tags view <leader>oa + m, See: https://orgmode.org/manual/Matching-tags-and-properties.html
+          org_agenda_overriding_header = 'My work todos',
+          org_agenda_todo_ignore_scheduled = 'all', -- Ignore all headlines that are scheduled. Possible values: past | future | all
+        },
+        {
+          type = 'agenda',
+          org_agenda_overriding_header = 'Whole week overview',
+          org_agenda_span = 'week',        -- 'week' is default, so it's not necessary here, just an example
+          org_agenda_start_on_weekday = 1, -- Start on Monday
+          org_agenda_remove_tags = true    -- Do not show tags only for this view
+        },
+      }
+    },
+  }
 })
 
 require('org-super-agenda').setup({
